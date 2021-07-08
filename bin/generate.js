@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-const appName = process.argv[3];
+const appName = process.argv[2];
 const { spawnSync } = require('child_process');
 const url = 'https://github.com/Mhmdhammoud/react-boiler-plate.git';
 
