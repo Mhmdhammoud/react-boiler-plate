@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "bin": {
-    "@mhmdhammoud/react-boiler-plate": "./generate.js"
+    "@mhmdhammoud/react-boiler-plate": "./bin/generate.js"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.1",
