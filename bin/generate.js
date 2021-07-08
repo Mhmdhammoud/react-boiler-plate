@@ -5,7 +5,7 @@ const { spawnSync } = require('child_process');
 const url = 'https://github.com/Mhmdhammoud/react-boiler-plate.git';
 
 spawnSync('git', ['clone', url, `${process.cwd()}/${appName}`]);
-spawnSync('npm', ['install', '--prefix', `${process.cwd()}/${appName}`]);
+spawnSync('npm', ['install']);
 
 console.log('Your app has been successfully installed');
 console.log(`$ cd ${appName}`);
