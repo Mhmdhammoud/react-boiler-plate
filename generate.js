@@ -1,10 +1,8 @@
 #! /usr/bin/env node
 
-'use strict';
-
 const appName = process.argv[2];
 const { spawnSync } = require('child_process');
-const url = 'git@github.com:jbonigomes/create-react-slides.git';
+const url = 'https://github.com/Mhmdhammoud/react-boiler-plate.git';
 
 spawnSync('git', ['clone', url, `${process.cwd()}/${appName}`]);
 spawnSync('npm', ['install', '--prefix', `${process.cwd()}/${appName}`]);
