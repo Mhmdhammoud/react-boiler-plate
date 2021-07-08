@@ -5,6 +5,10 @@
   "bin": {
     "@mhmdhammoud/react-boiler-plate": "./bin/generate.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mhmdhammoud/react-boiler-plate.git"
+  },
   "dependencies": {
     "@material-ui/core": "^4.12.1",
     "@material-ui/icons": "^4.11.2",
