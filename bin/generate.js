@@ -6,7 +6,7 @@ const url = 'https://github.com/Mhmdhammoud/react-boiler-plate.git';
 
 spawnSync('git', ['clone', url, `${process.cwd()}/${appName}`]);
 spawnSync('cd', [`${appName}`]);
-spawnSync('npm', ['install', '--prefix', `${process.cwd()}/${appName}`]);
+spawnSync('npm', ['install', '--prefix']);
 spawnSync('cd', [`${process.cwd()}/${appName}`]);
 console.log('Your app has been successfully installed');
 console.log('$ npm start');
