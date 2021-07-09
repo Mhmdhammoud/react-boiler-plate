@@ -4,17 +4,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Folder Structure
 
-src
-├── Actions # All Redux Actions are executed at this level
-├── Components # Reusable components can be accessed from this level
-├── config # Main configurations are added here e.g Redux
-├── Constants # Main Constants
-├── Hooks # Custom hooks
-├── Models
-├── redux  
- ├──Types # Action types
-├──responses # Rest api JSON response types
-└── Pages # Main Executed screen
-└── Reducers # Main Reducers and their root reducer
-└── Routes # All routes will be added in `index.tsx` which will maps `route.tsx` that can hold all the routing policies desired
-└── Services # All third party externals can be added here
+    src
+    ├── Actions                 # All Redux Actions are executed at this level
+    ├── Components              # Reusable components can be accessed from this level
+    ├── config                  # Main configurations are added here e.g Redux
+    ├── Constants               # Main Constants
+    ├── Hooks                   # Custom hooks
+    ├── Models
+     ├── resoponses             # Rest api JSON response types
+     ├── redux                  # Action types
+      ├──Types                  # Action types
+    ├── Reducers                # Main Reducers and their root reducer
+    ├── Routes                  # `index.tsx` which maps `route.tsx` that can hold all the routing policies desired
+    ├── Services                # All third party externals can be added here
+    └── pages                   # Main Rendered screen
