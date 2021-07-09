@@ -1,10 +1,7 @@
 import { Dispatch } from 'redux';
 import { AppActions } from '../models/redux/Types';
 import { AppState } from '../reducers';
-import { IUser } from '../models/Itypes';
 import Cookies from 'universal-cookie';
-import axios from 'axios';
-import { ApiConstants } from '../Constants/ApiConstants';
 import Api from '../Services/Api';
 
 interface Payload {
@@ -14,27 +11,18 @@ interface Payload {
 }
 
 const cookies = new Cookies();
-export const login = (user_info: IUser): AppActions => ({
+export const login = (): AppActions => ({
   type: 'LOGIN',
-  user_info,
 });
 
 export const startLogin = (payload: Payload) => {
   return (dispatch: Dispatch<AppActions> | any, getState: () => AppState) => {
     Api.Login(payload)
       .then((res) => {
-        const { token, type, fname, email, lname } = res?.data?.api;
+        const { token } = res?.data?.token;
         if (token) {
           cookies.set('token', token, { path: '/' });
-          cookies.set('type', type, { path: '/' });
-          cookies.set('fname', fname, { path: '/' });
-          cookies.set('lname', lname, { path: '/' });
-          cookies.set('email', email, { path: '/' });
-
-          dispatch(login({ type, fname, lname, email }));
-          const state = getState();
-          const { isAuthenticated } = state.auth;
-          if (!isAuthenticated) console.log('error');
+          dispatch(login());
         }
       })
       .catch((err) => {
